@@ -6,7 +6,9 @@ describe('Badge.vue', () => {
   it('Should add classes that are passed', () => {
     const vm = new Constructor({
       propsData: {
-        classes: ['blue', 'new']
+        item: {
+          classes: ['blue', 'new']
+        }
       }
     }).$mount()
     expect(vm.$el.classList.contains('badge'))
@@ -17,7 +19,9 @@ describe('Badge.vue', () => {
   it('Should add caption that is passed', () => {
     const vm = new Constructor({
       propsData: {
-        caption: 'test'
+        item: {
+          caption: 'test'
+        }
       }
     }).$mount()
     expect(vm.$el.hasAttribute('data-badge-caption'))
@@ -28,7 +32,9 @@ describe('Badge.vue', () => {
   it('Should add content that is passed', () => {
     const vm = new Constructor({
       propsData: {
-        content: 'test'
+        item: {
+          content: 'test'
+        }
       }
     }).$mount()
     expect(vm.$el.textContent)

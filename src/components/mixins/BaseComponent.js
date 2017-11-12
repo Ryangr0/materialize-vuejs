@@ -1,20 +1,21 @@
 export default {
   props: {
-    classes: {
-      type: Array,
-      required: false,
+    item: {
+      type: Object,
       default: function () {
-        return []
+        return {
+          classes: []
+        }
       }
-    },
-    content: {
-      type: String,
-      required: false
     }
   },
   computed: {
     getClasses: function () {
-      return this.classes.join(' ')
+      if (this.item.classes !== undefined) {
+        return this.item.classes.join(' ')
+      } else {
+        return ''
+      }
     }
   }
 }

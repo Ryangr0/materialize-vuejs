@@ -1,5 +1,5 @@
 <template>
-  <a class="btn" :class="getClasses">{{content}}</a>
+  <a class="btn" :class="getClasses">{{item.content}}</a>
 </template>
 
 <script>

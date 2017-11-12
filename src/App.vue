@@ -10,11 +10,11 @@
     <hr />
     <h2>Badges</h2>
     <div>
-      <Badge :classes="badge.classes" :content="badge.content" :caption="badge.caption"></Badge>
+      <Badge :item="badge"></Badge>
     </div>
     <hr />
     <h2>Buttons</h2>
-    <Btn :classes="button.classes" :content="button.content"></Btn>
+    <Btn :item="button"></Btn>
   </div>
 </template>
 

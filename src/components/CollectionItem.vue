@@ -1,16 +1,15 @@
 <template>
-  <a v-if="links" :href="item.href" class="collection-item">{{item.content}}</a>
-  <li v-else class="collection-item">{{item.content}}</li>
+  <a v-if="links" class="collection-item" :href="item.href" :class="getClasses">{{item.content}}</a>
+  <li v-else class="collection-item" :class="getClasses">{{item.content}}</li>
 </template>
 
 <script>
-export default {
-  props: {
-    item: {
-      type: Object,
-      required: true
+  import BaseComponent from './mixins/BaseComponent.js'
+
+  export default {
+    props: {
+      links: Boolean
     },
-    links: Boolean
+    mixins: [BaseComponent]
   }
-}
 </script>
