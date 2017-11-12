@@ -13,6 +13,11 @@
       <Badge :item="badge"></Badge>
     </div>
     <hr />
+    <h2>Breadcrumbs</h2>
+    <div>
+      <Breadcrumbs :items="breadcrumbs"></Breadcrumbs>
+    </div>
+    <hr />
     <h2>Buttons</h2>
     <Btn :item="button"></Btn>
     <hr />
@@ -20,7 +25,7 @@
       <h2>Card</h2>
     </div>
     <div class="row">
-      <div class="col s12 m7">
+      <div class="col s12">
         <Card :item="card"></Card>
       </div>
     </div>
@@ -30,6 +35,7 @@
 <script>
   import Badge from './components/Badge.vue'
   import Btn from './components/Button.vue'
+  import Breadcrumbs from './components/Breadcrumbs.vue'
   import Card from './components/Card.vue'
   import Collection from './components/Collection.vue'
 
@@ -38,6 +44,7 @@
     components: {
       Badge,
       Btn,
+      Breadcrumbs,
       Card,
       Collection
     },
@@ -84,6 +91,22 @@
           content: 'test',
           caption: 'caption'
         },
+        breadcrumbs: [
+          {
+            text: 'test1',
+            classes: ['testclass1']
+          },
+          {
+            text: 'test2',
+            href: 'test2href',
+            classes: ['testclass2']
+          },
+          {
+            text: 'test3',
+            href: 'test3href',
+            classes: ['testclass3']
+          }
+        ],
         button: {
           classes: ['waves-effect', 'waves-light'],
           content: 'test'
