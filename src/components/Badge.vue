@@ -3,28 +3,15 @@
 </template>
 
 <script>
+  import BaseComponent from './mixins/BaseComponent.js'
+
   export default {
     props: {
-      classes: {
-        type: Array,
-        required: false,
-        default: function () {
-          return []
-        }
-      },
       caption: {
-        type: String,
-        required: false
-      },
-      content: {
         type: String,
         required: false
       }
     },
-    computed: {
-      getClasses: function () {
-        return this.classes.join(' ')
-      }
-    }
+    mixins: [BaseComponent]
   }
 </script>
