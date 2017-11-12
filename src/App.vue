@@ -14,7 +14,7 @@
     </div>
     <hr />
     <h2>Breadcrumbs</h2>
-    <div>
+    <div class="row">
       <Breadcrumbs :items="breadcrumbs"></Breadcrumbs>
     </div>
     <hr />
@@ -138,4 +138,6 @@
 
 <style lang="scss">
   @import "./assets/css/app.scss";
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 </style>
+
