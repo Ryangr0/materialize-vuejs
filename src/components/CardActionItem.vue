@@ -6,9 +6,6 @@
   import BaseComponent from './mixins/BaseComponent.js'
 
   export default {
-    mixins: [BaseComponent],
-    mounted: function () {
-      console.log(this.item)
-    }
+    mixins: [BaseComponent]
   }
 </script>
