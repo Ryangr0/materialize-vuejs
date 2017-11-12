@@ -1,13 +1,35 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+      <h1>Components</h1>
+      <Collection :collection="collection"></Collection>
   </div>
 </template>
 
 <script>
+  import Collection from './components/Collection.vue'
+
   export default {
-    name: 'app'
+    name: 'app',
+    components: {
+      Collection
+    },
+    data: function () {
+      return {
+        collection: {
+          header: 'Collection header',
+          links: false,
+//          items: [
+//            {
+//              content: 'Item content',
+//              href: 'test'
+//            },
+//            {
+//              content: 'Item content 2'
+//            }
+//          ]
+        }
+      }
+    }
   }
 </script>
 
