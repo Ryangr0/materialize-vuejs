@@ -18,15 +18,15 @@
         collection: {
           header: 'Collection header',
           links: false,
-//          items: [
-//            {
-//              content: 'Item content',
-//              href: 'test'
-//            },
-//            {
-//              content: 'Item content 2'
-//            }
-//          ]
+          items: [
+            {
+              content: 'Item content',
+              href: 'test'
+            },
+            {
+              content: 'Item content 2'
+            }
+          ]
         }
       }
     }

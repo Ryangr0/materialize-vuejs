@@ -1,10 +1,6 @@
 <template>
-  <a v-if="links" :href="item.href" class="collection-item">
-    {{item.content}}
-  </a>
-  <li v-else class="collection-item">
-    {{item.content}}
-  </li>
+  <a v-if="links" :href="item.href" class="collection-item">{{item.content}}</a>
+  <li v-else class="collection-item">{{item.content}}</li>
 </template>
 
 <script>

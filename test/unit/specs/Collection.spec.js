@@ -15,7 +15,6 @@ describe('Collection.vue', () => {
     const vm = new Constructor({
       propsData: { collection: {} }
     }).$mount()
-    console.log(vm.$el.tagName)
     expect(vm.$el.tagName)
       .to.equal('UL')
   })
