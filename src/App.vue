@@ -49,7 +49,12 @@
           items: [
             {
               content: 'Item content',
-              href: 'test'
+              href: 'test',
+              badge: {
+                classes: ['blue', 'new'],
+                content: 'test',
+                caption: 'caption'
+              }
             },
             {
               content: 'Item content 2'
@@ -62,7 +67,12 @@
           items: [
             {
               content: 'Item content',
-              href: 'test'
+              href: 'test',
+              badge: {
+                classes: ['blue', 'new'],
+                content: 'test',
+                caption: 'caption'
+              }
             },
             {
               content: 'Item content 2'
