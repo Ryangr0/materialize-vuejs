@@ -9,19 +9,26 @@
     <Collection :collection="collectionLinks"></Collection>
     <hr />
     <h2>Badges</h2>
-    <Badge :classes="badge.classes" :content="badge.content" :caption="badge.caption"></Badge>
+    <div>
+      <Badge :classes="badge.classes" :content="badge.content" :caption="badge.caption"></Badge>
+    </div>
+    <hr />
+    <h2>Buttons</h2>
+    <Btn :classes="button.classes" :content="button.content"></Btn>
   </div>
 </template>
 
 <script>
-  import Collection from './components/Collection.vue'
   import Badge from './components/Badge.vue'
+  import Btn from './components/Button.vue'
+  import Collection from './components/Collection.vue'
 
   export default {
     name: 'app',
     components: {
-      Collection,
-      Badge
+      Badge,
+      Btn,
+      Collection
     },
     data: function () {
       return {
@@ -55,6 +62,10 @@
           classes: ['blue', 'new'],
           content: 'test',
           caption: 'caption'
+        },
+        button: {
+          classes: ['waves-effect', 'waves-light'],
+          content: 'test'
         }
       }
     }
