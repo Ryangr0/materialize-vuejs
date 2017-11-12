@@ -15,12 +15,22 @@
     <hr />
     <h2>Buttons</h2>
     <Btn :item="button"></Btn>
+    <hr />
+    <div class="row">
+      <h2>Card</h2>
+    </div>
+    <div class="row">
+      <div class="col s12 m7">
+        <Card :item="card"></Card>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
   import Badge from './components/Badge.vue'
   import Btn from './components/Button.vue'
+  import Card from './components/Card.vue'
   import Collection from './components/Collection.vue'
 
   export default {
@@ -28,6 +38,7 @@
     components: {
       Badge,
       Btn,
+      Card,
       Collection
     },
     data: function () {
@@ -66,6 +77,26 @@
         button: {
           classes: ['waves-effect', 'waves-light'],
           content: 'test'
+        },
+        card: {
+          classes: ['test-card-1'],
+          image: {
+            classes: ['test-cart-2'],
+            url: 'testurl',
+            title: 'TestTitle1'
+          },
+          content: {
+            classes: ['test-card-3'],
+            title: 'TestTitle2',
+            text: 'TestText1'
+          },
+          actions: [
+            {
+              classes: ['test-card-4'],
+              href: 'TestHref',
+              text: 'TestText1'
+            }
+          ]
         }
       }
     }
