@@ -2,31 +2,49 @@
   <div id="app">
     <h1>Components</h1>
     <hr />
+
     <h2>Collection</h2>
     <h3>Normal</h3>
     <Collection :collection="collectionNormal"></Collection>
     <h3>links</h3>
     <Collection :collection="collectionLinks"></Collection>
+
     <hr />
+
     <h2>Badges</h2>
     <div>
       <Badge :item="badge"></Badge>
     </div>
+
     <hr />
+
     <h2>Breadcrumbs</h2>
     <div class="row">
       <Breadcrumbs :items="breadcrumbs"></Breadcrumbs>
     </div>
+
     <hr />
+
     <h2>Buttons</h2>
     <Btn :item="button"></Btn>
     <hr />
     <div class="row">
       <h2>Card</h2>
     </div>
+
     <div class="row">
       <div class="col s12">
         <Card :item="card"></Card>
+      </div>
+    </div>
+
+    <div class="row">
+      <h2>Chips</h2>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <Chip :item="chip1"></Chip>
+        <Chip :item="chip2"></Chip>
       </div>
     </div>
   </div>
@@ -38,6 +56,7 @@
   import Breadcrumbs from './components/Breadcrumbs.vue'
   import Card from './components/Card.vue'
   import Collection from './components/Collection.vue'
+  import Chip from './components/Chip.vue'
 
   export default {
     name: 'app',
@@ -46,7 +65,8 @@
       Btn,
       Breadcrumbs,
       Card,
-      Collection
+      Collection,
+      Chip
     },
     data: function () {
       return {
@@ -130,6 +150,15 @@
               text: 'TestText1'
             }
           ]
+        },
+        chip1: {
+          src: 'testsrc',
+          text: 'testtext1'
+        },
+        chip2: {
+          src: 'testsrc',
+          text: 'testtext1',
+          closable: true
         }
       }
     }
