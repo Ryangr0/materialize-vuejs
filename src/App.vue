@@ -47,6 +47,24 @@
         <Chip :item="chip2"></Chip>
       </div>
     </div>
+
+    <hr />
+
+    <div class="row">
+      <h2>Form</h2>
+    </div>
+    <div class="row">
+      <h3>Textfields</h3>
+    </div>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <FormText :item="formText"></FormText>
+          <FormText :item="formText"></FormText>
+          <FormText :item="formText"></FormText>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -57,6 +75,7 @@
   import Card from './components/Card.vue'
   import Collection from './components/Collection.vue'
   import Chip from './components/Chip.vue'
+  import FormText from './components/Form/Text.vue'
 
   export default {
     name: 'app',
@@ -66,7 +85,8 @@
       Breadcrumbs,
       Card,
       Collection,
-      Chip
+      Chip,
+      FormText
     },
     data: function () {
       return {
@@ -159,6 +179,12 @@
           src: 'testsrc',
           text: 'testtext1',
           closable: true
+        },
+        formText: {
+          id: 'test12345',
+          placeholder: 'test',
+          validate: false,
+          label: 'Label'
         }
       }
     }
